@@ -41,6 +41,13 @@ typedef NS_ENUM(NSInteger,SMSliderType){
  */
 @property(strong ,nonatomic) UIColor * progressColor;
 
+/**
+ *  @author StoneMover, 15-12-14 14:12:48
+ *
+ *  @brief 缓冲条颜色
+ */
+@property(strong ,nonatomic) UIColor * bufferBgColor;
+
 
 /**
  *  @author StoneMover, 15-12-07 14:12:48
@@ -70,6 +77,13 @@ typedef NS_ENUM(NSInteger,SMSliderType){
  *  @brief 进度条的值
  */
 @property(assign, nonatomic) float value;
+
+/**
+ *  @author StoneMover, 15-12-12 14:12:07
+ *
+ *  @brief 缓冲条的值
+ */
+@property(assign, nonatomic) float bufferValue;
 
 
 @property(weak, nonatomic)id<SMSliderDelegate> delegate;

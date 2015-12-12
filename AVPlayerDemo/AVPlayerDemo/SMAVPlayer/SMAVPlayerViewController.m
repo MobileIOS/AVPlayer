@@ -83,7 +83,7 @@
     AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
     playerLayer.frame = CGRectMake(0, 0, ScreenHeight ,ScreenWidth );
     [self.viewAvPlayer.layer addSublayer:playerLayer];
-    [self.player seekToTime:CMTimeMakeWithSeconds(self.startTime, 1000)];//设置播放位置
+    [self.player seekToTime:CMTimeMakeWithSeconds(self.startTime, 1000)];//设置播放位置1000 为帧率
     [_player play];
 }
 
@@ -110,6 +110,13 @@
     VedioModel *vedioModel = _arrVedio[videoIndex];
     NSString *urlStr =[vedioModel.strURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURL *url=[NSURL URLWithString:urlStr];
+    /*获取总帧数与帧率
+     NSDictionary *opts = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO]
+     forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
+     AVURLAsset *myAsset = [[AVURLAsset alloc] initWithURL:url options:opts];
+     CMTimeValue  value = myAsset.duration.value;//总帧数
+     CMTimeScale  timeScale =   myAsset.duration.timescale; //timescale为帧率  fps
+     */
     AVPlayerItem *playerItem=[AVPlayerItem playerItemWithURL:url];
     return playerItem;
 }
@@ -222,6 +229,7 @@
         float startSeconds = CMTimeGetSeconds(timeRange.start);
         float durationSeconds = CMTimeGetSeconds(timeRange.duration);
         NSTimeInterval totalBuffer = startSeconds + durationSeconds;//缓冲总长度
+        self.slider.bufferValue = totalBuffer/self.totalTime;
         NSLog(@"缓冲：%.2f",totalBuffer);
     }else if ([keyPath isEqualToString:@"playbackBufferEmpty"]){
         NSLog(@"playbackBufferEmpty");
