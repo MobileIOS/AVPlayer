@@ -31,12 +31,13 @@
         self.items = anItems;
         self.cellIdentifier = aCellIdentifier;
         self.configureCellBlock = [aConfigureCellBlock copy];
-    }
+    }CABasicAnimation
     return self;
 }
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     return self.items[(NSUInteger) indexPath.row];
 }
 
