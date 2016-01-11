@@ -100,7 +100,7 @@
 		FAED7E491C435389004E44DD /* play_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_stop.png; sourceTree = "<group>"; };
 		FAED7E4A1C435389004E44DD /* play_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play_start@2x.png"; sourceTree = "<group>"; };
 		FAED7E4B1C435389004E44DD /* play_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_start.png; sourceTree = "<group>"; };
-		FAED7E501C4354D4004E44DD /* play_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_next.png; sourceTree = "<group>"; };
+		FAED7E501C4354D4004E44DD /* play_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play_next.png; path = ../play_next.png; sourceTree = "<group>"; };
 		FAF8E5031C196E0400C9BE5E /* person_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person_background.png; sourceTree = "<group>"; };
 		FAF8E5061C196F3200C9BE5E /* SMAVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAVPlayerViewController.h; sourceTree = "<group>"; };
 		FAF8E5071C196F3200C9BE5E /* SMAVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAVPlayerViewController.m; sourceTree = "<group>"; };
@@ -213,7 +213,6 @@
 				FAF8E52F1C19776C00C9BE5E /* Utils */,
 				FAF8E50F1C196F5C00C9BE5E /* Thirdlibrary */,
 				FAF8E5021C196D4800C9BE5E /* Image */,
-				FAED7E501C4354D4004E44DD /* play_next.png */,
 				FA05D6371C16B5B100EFDF6A /* Supporting Files */,
 			);
 			path = AVPlayerDemo;
@@ -262,6 +261,7 @@
 		FAF8E5021C196D4800C9BE5E /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				FAED7E501C4354D4004E44DD /* play_next.png */,
 				FAED7E481C435389004E44DD /* play_stop@2x.png */,
 				FAED7E491C435389004E44DD /* play_stop.png */,
 				FAED7E4A1C435389004E44DD /* play_start@2x.png */,
