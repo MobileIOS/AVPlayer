@@ -31,7 +31,7 @@
         self.items = anItems;
         self.cellIdentifier = aCellIdentifier;
         self.configureCellBlock = [aConfigureCellBlock copy];
-    }CABasicAnimation
+    }
     return self;
 }
 

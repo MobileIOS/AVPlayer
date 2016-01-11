@@ -102,32 +102,20 @@
     if (indexPath.row == 0) {
         SMAVPlayerViewController *playerVC = [[SMAVPlayerViewController alloc] initWithNibName:@"SMAVPlayerViewController" bundle:nil];
         NSMutableArray *arrVedio = [NSMutableArray array];
-        for (NSInteger i = 0 ; i < 6; i++) {
+        for (NSInteger i = 0 ; i < 2; i++) {
             VedioModel *vedioModel = [[VedioModel alloc] init];
             switch (i) {
                 case  0:
-                    vedioModel.strURL = @"http://7xon2b.com2.z0.glb.qiniucdn.com/80abc017d15d4fd775810d1ae5e6fef2";
-                    vedioModel.strTitle = @"精伦电子";
+                    vedioModel.strURL = @"http://7xoour.com2.z0.glb.qiniucdn.com/b829da10164468be9072ed98cd20c98f";
+                    vedioModel.strTitle = @"娲石集团：人品铸产品";
                     break;
                 case  1:
-                    vedioModel.strURL = @"http://7xon2b.com2.z0.glb.qiniucdn.com/b2762680ad61a0b34a8470a1c4c25668";
-                    vedioModel.strTitle = @"武汉工程科技学院";
+                    vedioModel.strURL = @"http://7xoour.com2.z0.glb.qiniucdn.com/fdbe32614a1167756be2a65721e15c59";
+                    vedioModel.strTitle = @"精伦电子";
                     break;
                 case  2:
-                    vedioModel.strURL = @"http://7xon2b.com2.z0.glb.qiniucdn.com/cf086e5950eebccf7476d9e36648d522";
-                    vedioModel.strTitle = @"东信集团";
-                    break;
-                case  3:
-                    vedioModel.strURL = @"http://7xon2b.com2.z0.glb.qiniucdn.com/297d0e2bc214ae596a75638d5c1c88a8";
-                    vedioModel.strTitle = @"爱帝品牌：创造舒适美";
-                    break;
-                case  4:
-                    vedioModel.strURL = @"http://7xon2b.com2.z0.glb.qiniucdn.com/be017eb560df13a735738e148ca192eb";
-                    vedioModel.strTitle = @"汇春集团：健康生活选菜夫人";
-                    break;
-                case  5:
-                    vedioModel.strURL = @"http://7xon2b.com2.z0.glb.qiniucdn.com/8ff1788b976ab4e993bd99cdd7b808b6";
-                    vedioModel.strTitle = @"娲石集团：人品铸产品";
+                    vedioModel.strURL = @"http://7xoour.com2.z0.glb.qiniucdn.com/0ca32443a48076a75e6b534b64a4c221";
+                    vedioModel.strTitle = @"德骼拜尔";
                     break;
                 default:
                     break;
