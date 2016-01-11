@@ -99,7 +99,7 @@ typedef NS_ENUM(NSInteger,SMSliderType){
 /**
  *  @author StoneMover, 15-12-07 14:12:50
  *
- *  @brief 是否允许拖动经度条
+ *  @brief 是否允许拖动进度条
  */
 @property(assign, nonatomic) BOOL isAllowDrag;
 @end

@@ -147,7 +147,7 @@
 {
     if (self.player.rate == 0) {
         [self.player play];
-        [self.btnPause setTitle:@"暂停" forState:UIControlStateNormal];
+        [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_stop.png"] forState:UIControlStateNormal];
     }
 }
 
@@ -155,7 +155,7 @@
 {
     if (self.player.rate == 1){
         [self.player pause];
-        [self.btnPause setTitle:@"播放" forState:UIControlStateNormal];
+        [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_start.png"] forState:UIControlStateNormal];
     }
 }
 
@@ -214,7 +214,7 @@
         if(status == AVPlayerStatusReadyToPlay){
             self.totalTime = CMTimeGetSeconds(playerItem.duration);
             NSLog(@"开始播放,视频总长度:%.2f",CMTimeGetSeconds(playerItem.duration));
-            [self.btnPause setTitle:@"暂停" forState:UIControlStateNormal];
+             [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_stop.png"] forState:UIControlStateNormal];
             [_player play];
             [self.viewLogin setHidden:YES];
             [self clearProhibitOperation];
@@ -224,11 +224,16 @@
             NSLog(@"%@",@"AVPlayerStatusFailed");
         }
     }else if([keyPath isEqualToString:@"loadedTimeRanges"]){
-        NSArray *array=playerItem.loadedTimeRanges;
+        NSArray *array = playerItem.loadedTimeRanges;
         CMTimeRange timeRange = [array.firstObject CMTimeRangeValue];//本次缓冲时间范围
         float startSeconds = CMTimeGetSeconds(timeRange.start);
         float durationSeconds = CMTimeGetSeconds(timeRange.duration);
         NSTimeInterval totalBuffer = startSeconds + durationSeconds;//缓冲总长度
+        if (self.currentTime < (startSeconds + durationSeconds + 8)) {
+            self.viewLogin.hidden  = YES;
+        }else{
+            self.viewLogin.hidden = NO;
+        }
         self.slider.bufferValue = totalBuffer/self.totalTime;
         NSLog(@"缓冲：%.2f",totalBuffer);
     }else if ([keyPath isEqualToString:@"playbackBufferEmpty"]){
@@ -311,10 +316,12 @@
 - (IBAction)pauseClick:(id)sender {
     if (_player.rate == 0) {
         [_player play];
-        [self.btnPause setTitle:@"暂停" forState:UIControlStateNormal];
+        //[self.btnPause setTitle:@"暂停" forState:UIControlStateNormal];
+        [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_stop.png"] forState:UIControlStateNormal];
     }else{
         [_player pause];
-        [self.btnPause setTitle:@"播放" forState:UIControlStateNormal];
+        //[self.btnPause setTitle:@"播放" forState:UIControlStateNormal];
+         [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_start.png"] forState:UIControlStateNormal];
     }
 }
 
@@ -341,7 +348,7 @@
          [self.player.currentItem cancelPendingSeeks];
          [self.player.currentItem.asset cancelLoading];
          */
-        [self.btnPause setTitle:@"播放" forState:UIControlStateNormal];
+        [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_start.png"] forState:UIControlStateNormal];
         self.labelTimeTotal.text = @"00:00:00";
         self.labelTimeNow.text = @"00:00:00";
         [MBMessageTip messageWithTip:self.view withMessage:@"没有更多了" ];

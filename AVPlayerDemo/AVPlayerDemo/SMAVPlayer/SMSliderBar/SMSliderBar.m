@@ -49,10 +49,12 @@ const int defaultProgressHeight=4;
         self.viewPoint.backgroundColor=[UIColor lightGrayColor];
     }
     
-    self.viewBg = [[UIView alloc]init];
-    self.viewProgress = [[UIView alloc]init];
+    self.viewBg = [[UIView alloc] init];
+    self.viewBuffer = [[UIView alloc] init];
+    self.viewProgress = [[UIView alloc] init];
     self.viewBg.userInteractionEnabled=YES;
     [self addSubview:self.viewBg];
+    [self addSubview:self.viewBuffer];
     [self addSubview:self.viewProgress];
     [self addSubview:self.viewPoint];
 }

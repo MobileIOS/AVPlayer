@@ -21,6 +21,11 @@
 		FA8A60FF1C19ABDE0078BC02 /* ButtonTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8A60FD1C19ABDE0078BC02 /* ButtonTestViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		FA8A61031C19B5150078BC02 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8A61021C19B5150078BC02 /* ArrayDataSource.m */; settings = {ASSET_TAGS = (); }; };
 		FA8A61061C19B63D0078BC02 /* PlayerHistoryTableViewCell+ConfigureForHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8A61051C19B63D0078BC02 /* PlayerHistoryTableViewCell+ConfigureForHistory.m */; settings = {ASSET_TAGS = (); }; };
+		FAED7E4C1C435389004E44DD /* play_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAED7E481C435389004E44DD /* play_stop@2x.png */; settings = {ASSET_TAGS = (); }; };
+		FAED7E4D1C435389004E44DD /* play_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = FAED7E491C435389004E44DD /* play_stop.png */; settings = {ASSET_TAGS = (); }; };
+		FAED7E4E1C435389004E44DD /* play_start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAED7E4A1C435389004E44DD /* play_start@2x.png */; settings = {ASSET_TAGS = (); }; };
+		FAED7E4F1C435389004E44DD /* play_start.png in Resources */ = {isa = PBXBuildFile; fileRef = FAED7E4B1C435389004E44DD /* play_start.png */; settings = {ASSET_TAGS = (); }; };
+		FAED7E511C4354D4004E44DD /* play_next.png in Resources */ = {isa = PBXBuildFile; fileRef = FAED7E501C4354D4004E44DD /* play_next.png */; settings = {ASSET_TAGS = (); }; };
 		FAF8E5041C196E0400C9BE5E /* person_background.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF8E5031C196E0400C9BE5E /* person_background.png */; settings = {ASSET_TAGS = (); }; };
 		FAF8E50C1C196F3200C9BE5E /* SMAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF8E5071C196F3200C9BE5E /* SMAVPlayerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FAF8E50D1C196F3200C9BE5E /* SMAVPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8E5081C196F3200C9BE5E /* SMAVPlayerViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -91,6 +96,11 @@
 		FA8A61021C19B5150078BC02 /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
 		FA8A61041C19B63D0078BC02 /* PlayerHistoryTableViewCell+ConfigureForHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PlayerHistoryTableViewCell+ConfigureForHistory.h"; sourceTree = "<group>"; };
 		FA8A61051C19B63D0078BC02 /* PlayerHistoryTableViewCell+ConfigureForHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PlayerHistoryTableViewCell+ConfigureForHistory.m"; sourceTree = "<group>"; };
+		FAED7E481C435389004E44DD /* play_stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play_stop@2x.png"; sourceTree = "<group>"; };
+		FAED7E491C435389004E44DD /* play_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_stop.png; sourceTree = "<group>"; };
+		FAED7E4A1C435389004E44DD /* play_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play_start@2x.png"; sourceTree = "<group>"; };
+		FAED7E4B1C435389004E44DD /* play_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_start.png; sourceTree = "<group>"; };
+		FAED7E501C4354D4004E44DD /* play_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_next.png; sourceTree = "<group>"; };
 		FAF8E5031C196E0400C9BE5E /* person_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person_background.png; sourceTree = "<group>"; };
 		FAF8E5061C196F3200C9BE5E /* SMAVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAVPlayerViewController.h; sourceTree = "<group>"; };
 		FAF8E5071C196F3200C9BE5E /* SMAVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAVPlayerViewController.m; sourceTree = "<group>"; };
@@ -203,6 +213,7 @@
 				FAF8E52F1C19776C00C9BE5E /* Utils */,
 				FAF8E50F1C196F5C00C9BE5E /* Thirdlibrary */,
 				FAF8E5021C196D4800C9BE5E /* Image */,
+				FAED7E501C4354D4004E44DD /* play_next.png */,
 				FA05D6371C16B5B100EFDF6A /* Supporting Files */,
 			);
 			path = AVPlayerDemo;
@@ -251,6 +262,10 @@
 		FAF8E5021C196D4800C9BE5E /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				FAED7E481C435389004E44DD /* play_stop@2x.png */,
+				FAED7E491C435389004E44DD /* play_stop.png */,
+				FAED7E4A1C435389004E44DD /* play_start@2x.png */,
+				FAED7E4B1C435389004E44DD /* play_start.png */,
 				FAF8E57C1C1998B900C9BE5E /* default_image_road.png */,
 				FAF8E57D1C1998B900C9BE5E /* back_button.png */,
 				FAF8E53D1C19813F00C9BE5E /* me.png */,
@@ -488,11 +503,13 @@
 				FAF8E56E1C19923A00C9BE5E /* icon-success@2x.png in Resources */,
 				FAF8E57F1C1998B900C9BE5E /* back_button.png in Resources */,
 				FAF8E5761C19923A00C9BE5E /* requestNodata.png in Resources */,
+				FAED7E4D1C435389004E44DD /* play_stop.png in Resources */,
 				FA05D6471C16B5B100EFDF6A /* LaunchScreen.storyboard in Resources */,
 				FA8A60FF1C19ABDE0078BC02 /* ButtonTestViewController.xib in Resources */,
 				FA05D65A1C16CC9000EFDF6A /* PlayerListViewController.xib in Resources */,
 				FAF8E56C1C19923A00C9BE5E /* icon-info@2x.png in Resources */,
 				FAF8E56D1C19923A00C9BE5E /* icon-success.png in Resources */,
+				FAED7E511C4354D4004E44DD /* play_next.png in Resources */,
 				FAF8E5751C19923A00C9BE5E /* requestError.png in Resources */,
 				FAF8E56B1C19923A00C9BE5E /* icon-info.png in Resources */,
 				FAF8E57E1C1998B900C9BE5E /* default_image_road.png in Resources */,
@@ -500,10 +517,13 @@
 				FAF8E5701C19923A00C9BE5E /* MJRefresh.bundle in Resources */,
 				FAF8E56A1C19923A00C9BE5E /* icon-error@2x.png in Resources */,
 				FAF8E5471C19916200C9BE5E /* PlayerHistoryTableViewCell.xib in Resources */,
+				FAED7E4E1C435389004E44DD /* play_start@2x.png in Resources */,
+				FAED7E4C1C435389004E44DD /* play_stop@2x.png in Resources */,
 				FAF8E53E1C19813F00C9BE5E /* me.png in Resources */,
 				FAF8E5771C19923A00C9BE5E /* requestNodata1.png in Resources */,
 				FA05D6441C16B5B100EFDF6A /* Assets.xcassets in Resources */,
 				FAF8E50D1C196F3200C9BE5E /* SMAVPlayerViewController.xib in Resources */,
+				FAED7E4F1C435389004E44DD /* play_start.png in Resources */,
 				FAF8E5491C19916200C9BE5E /* PlayerHistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
