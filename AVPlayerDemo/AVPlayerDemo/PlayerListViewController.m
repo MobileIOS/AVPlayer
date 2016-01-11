@@ -106,7 +106,7 @@
             VedioModel *vedioModel = [[VedioModel alloc] init];
             switch (i) {
                 case  0:
-                    vedioModel.strURL = @"http://7xoour.com2.z0.glb.qiniucdn.com/b829da10164468be9072ed98cd20c98f";
+                    vedioModel.strURL = @"http://221.229.165.31:80/play/274CF5C996AFCE2C751D315B5D1BF131B8C08208/298088%5Fstandard.mp4";
                     vedioModel.strTitle = @"娲石集团：人品铸产品";
                     break;
                 case  1:

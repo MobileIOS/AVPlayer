@@ -231,6 +231,7 @@
         NSTimeInterval totalBuffer = startSeconds + durationSeconds;//缓冲总长度
         if (self.currentTime < (startSeconds + durationSeconds + 8)) {
             self.viewLogin.hidden  = YES;
+            [_player play];
         }else{
             self.viewLogin.hidden = NO;
         }
