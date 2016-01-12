@@ -12,7 +12,7 @@
 #import "PlayerHistoryViewController.h"
 #import "ButtonTestViewController.h"
 
-@interface PlayerListViewController ()
+@interface PlayerListViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
 @property (weak, nonatomic) IBOutlet UIView *viewTableHead;
 @property (weak, nonatomic) IBOutlet UIImageView *imageTableHead;

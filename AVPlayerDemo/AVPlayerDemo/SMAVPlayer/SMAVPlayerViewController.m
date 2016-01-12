@@ -91,9 +91,9 @@
 #pragma mark - set/get
 - (AVPlayer *)player{
     if (!_player) {
-        AVPlayerItem *playerItem=[self getPlayItem:subscript];
+        AVPlayerItem *playerItem = [self getPlayItem:subscript];
         [self addObserverToPlayerItem:playerItem];
-        _player=[AVPlayer playerWithPlayerItem:playerItem];
+        _player = [AVPlayer playerWithPlayerItem:playerItem];
     }
     return _player;
 }
@@ -117,7 +117,7 @@
      CMTimeValue  value = myAsset.duration.value;//总帧数
      CMTimeScale  timeScale =   myAsset.duration.timescale; //timescale为帧率  fps
      */
-    AVPlayerItem *playerItem=[AVPlayerItem playerItemWithURL:url];
+    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:url];
     return playerItem;
 }
 
@@ -147,6 +147,7 @@
 {
     if (self.player.rate == 0) {
         [self.player play];
+        [self.btnPause setTitle:@"暂停" forState:UIControlStateNormal];
         [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_stop.png"] forState:UIControlStateNormal];
     }
 }
@@ -155,6 +156,7 @@
 {
     if (self.player.rate == 1){
         [self.player pause];
+        [self.btnPause setTitle:@"播放" forState:UIControlStateNormal];
         [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_start.png"] forState:UIControlStateNormal];
     }
 }
@@ -165,7 +167,7 @@
 
 #pragma mark - KVO
 - (void)addProgressObserver{
-    AVPlayerItem *playerItem=self.player.currentItem;
+    AVPlayerItem *playerItem = self.player.currentItem;
     //这里设置每秒执行一次
     __weak __typeof(self) weakself = self;
     self.timeObserver = [_player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 1.0) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
@@ -214,6 +216,7 @@
         if(status == AVPlayerStatusReadyToPlay){
             self.totalTime = CMTimeGetSeconds(playerItem.duration);
             NSLog(@"开始播放,视频总长度:%.2f",CMTimeGetSeconds(playerItem.duration));
+            [self.btnPause setTitle:@"暂停" forState:UIControlStateNormal];
              [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_stop.png"] forState:UIControlStateNormal];
             [_player play];
             [self.viewLogin setHidden:YES];
@@ -231,7 +234,9 @@
         NSTimeInterval totalBuffer = startSeconds + durationSeconds;//缓冲总长度
         if (self.currentTime < (startSeconds + durationSeconds + 8)) {
             self.viewLogin.hidden  = YES;
-            [_player play];
+            if ([self.btnPause.titleLabel.text isEqualToString:@"暂停"]) {
+                [_player play];
+            }
         }else{
             self.viewLogin.hidden = NO;
         }
@@ -293,12 +298,12 @@
 
 #pragma mark - smSliderDelegate
 - (void)SMSliderBar:(UIView *)slider valueChanged:(float)value{
-    self.isHasMovie=YES;
+    self.isHasMovie = YES;
 }
 
 - (void)SMSliderBarBeginTouch:(UIView *)slider{
     [_player pause];
-    self.isHasMovie=NO;
+    self.isHasMovie = NO;
 }
 
 - (void)SMSliderBarEndTouch:(UIView *)slider{
@@ -317,12 +322,12 @@
 - (IBAction)pauseClick:(id)sender {
     if (_player.rate == 0) {
         [_player play];
-        //[self.btnPause setTitle:@"暂停" forState:UIControlStateNormal];
+        [self.btnPause setTitle:@"暂停" forState:UIControlStateNormal];
         [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_stop.png"] forState:UIControlStateNormal];
     }else{
         [_player pause];
-        //[self.btnPause setTitle:@"播放" forState:UIControlStateNormal];
-         [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_start.png"] forState:UIControlStateNormal];
+        [self.btnPause setTitle:@"播放" forState:UIControlStateNormal];
+        [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_start.png"] forState:UIControlStateNormal];
     }
 }
 
@@ -349,6 +354,7 @@
          [self.player.currentItem cancelPendingSeeks];
          [self.player.currentItem.asset cancelLoading];
          */
+        [self.btnPause setTitle:@"播放" forState:UIControlStateNormal];
         [self.btnPause setBackgroundImage:[UIImage imageNamed:@"play_start.png"] forState:UIControlStateNormal];
         self.labelTimeTotal.text = @"00:00:00";
         self.labelTimeNow.text = @"00:00:00";
