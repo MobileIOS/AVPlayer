@@ -341,7 +341,7 @@
         [self removeNotification];
         [self removeObserverFromPlayerItem:self.player.currentItem];
         [self.player removeTimeObserver:self.timeObserver];
-        [self.player replaceCurrentItemWithPlayerItem:[self getPlayItem:subscript]];
+         [_player replaceCurrentItemWithPlayerItem:[self getPlayItem:subscript]];
         [self addObserverToPlayerItem:self.player.currentItem];
         [self addNotification];
         [self addProgressObserver];
